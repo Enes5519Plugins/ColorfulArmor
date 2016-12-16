@@ -1,0 +1,10 @@
+name: ColorfulArmor
+version: 1.0
+main: Enes5519\colorfularmor\ColorfulArmor
+api: [2.1.0]
+author: Enes5519
+
+permissions:
+  enes5519.colorfularmor:
+    default: op
+    description: ColorfulArmor Permission
