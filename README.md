@@ -7,6 +7,9 @@
 - Saniyede bir renk değiştirir.
 - Vipler için permission
 
+# VIDEO
+- https://youtu.be/p20t1KLZ7ug
+
 # Coming Soon
 **English**
 - Set time from config. (Easy)
