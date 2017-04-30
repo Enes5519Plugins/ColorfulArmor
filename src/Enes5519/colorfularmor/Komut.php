@@ -3,12 +3,15 @@
 namespace Enes5519\colorfularmor;
 
 use pocketmine\command\{CommandSender, Command};
-use pocketmine\{Player, Server};
+use pocketmine\Player;
 
 class Komut extends Command{
-
+    
+    private $p;
+    
     public function __construct($plugin){
-        $this->p = $plugin;
+        $this->p = ColorfulArmor::getInstance();
+        $this->setAliases(array("ca"));
         parent::__construct("colorfularmor", "ColorfulArmor by Enes5519");
     }
     
@@ -21,21 +24,13 @@ class Komut extends Command{
                     $g->sendMessage("§8» §aColorfulArmor enabled!");
                 }else{
                     unset($main->kullanan[$g->getName()]);
-                    $this->zirhsil($g);
+                    $main->zirhsil($g);
                     $g->sendMessage("§8» §cColorfulArmor disabled!");
                 }
             }else{
                 $g->sendMessage("§8» §cNo permission!");
             }
         }
-    }
-    
-    public function zirhsil($g){
-        $s = $g->getInventory()->getSize();
-        $g->getInventory()->clear($s);
-        $g->getInventory()->clear($s+1);
-        $g->getInventory()->clear($s+2);
-        $g->getInventory()->clear($s+3);
     }
 
 }
